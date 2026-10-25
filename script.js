@@ -10,15 +10,17 @@ function jump(){
 }
 
 var checkDead = setInterval(function(){
-    var characterTop =
-    parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    var blockLeft =
-    parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(blockLeft < 40 && blockLeft > -20 && characterTop >= 130) {
+    var characterBounds = character.getBoundingClientRect();
+    var blockBounds = block.getBoundingClientRect();
+    var collision = characterBounds.left < blockBounds.right &&
+        characterBounds.right > blockBounds.left &&
+        characterBounds.top < blockBounds.bottom &&
+        characterBounds.bottom > blockBounds.top;
+
+    if(collision) {
+        clearInterval(checkDead);
         block.style.animation = "none";
         block.style.display = "none";
         alert("Pathetic. You lost, you loser. The vacuum cleaner won. Admit it.")
-}
-
-    
+    }
 },10);
