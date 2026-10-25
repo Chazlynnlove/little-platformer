@@ -2,6 +2,11 @@
     padding: 0;
     margin: 0;
 }
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
 #game {
     display: flex;
     justify-content: center;
@@ -12,6 +17,8 @@
     position: relative;
     overflow: hidden; 
     background-image: url(images/house.jpg);
+    background-position: center;
+    background-size: cover;
 }
 #character {
     display: flex;
