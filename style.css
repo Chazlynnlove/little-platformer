@@ -26,8 +26,8 @@ body {
     background-image: url(images/running.gif);
     background-position: center;
     background-size: cover;
-    width: 15px;
-    height: 10px;
+    width: 30px;
+    height: 20px;
     position: absolute;
     left: 0;
     top: 150px;
@@ -42,8 +42,8 @@ body {
     background-image: url(images/vacuum-cleaner.png);
     background-position: center;
     background-size: cover;
-    width: 20px;
-    height: 10px;
+    width: 30px;
+    height: 20px;
     position: absolute;
     bottom: 0;
     left: 480px;
