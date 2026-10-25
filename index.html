@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
-    <head>
-        <title>Platformer</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <div id="game">
-            <div id="character">
-                <img src="images/running.gif" height="30" width="30">
-            </div>
-             <div id="block">
-                <img src="images/vacuum-cleaner.png" height="60" width="60">
-             </div>
-        </div>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platformer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="game" aria-label="Platform game area">
+      <div id="character" aria-label="Player character"></div>
+      <div id="block" aria-label="Vacuum cleaner obstacle"></div>
+    </div>
+  </body>
 </html>

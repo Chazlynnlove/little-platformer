@@ -1,71 +1,70 @@
 * {
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
 }
-body {
-    min-height: 100vh;
-    background-color: deeppink;
 
+html,
+body {
+  margin: 0;
+  min-height: 100%;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #f8d7e4 0%, #ffebcc 100%);
+}
+
 #game {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 200px;
-    border: 1px solid black;
-    position: relative;
-    overflow: hidden; 
-    background-image: url(images/house.jpg);
-    background-position: center;
-    background-size: cover;
+  position: relative;
+  width: 500px;
+  height: 200px;
+  border: 2px solid #111;
+  overflow: hidden;
+  background: url("images/house.jpg") center/cover no-repeat;
 }
+
 #character {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/running.gif);
-    background-position: center;
-    background-size: cover;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 0;
-    top: 150px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background: url("images/running.gif") center/cover no-repeat;
 }
+
 .animate {
-    animation: jump 500ms;
+  animation: jump 500ms ease-out;
 }
+
 #block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/vacuum-cleaner.png);
-    background-position: center;
-    background-size: cover;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    bottom: 0;
-    left: 480px;
-    animation: block 1s infinite linear;
+  position: absolute;
+  left: calc(100% - 60px);
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: url("images/vacuum-cleaner.png") center/cover no-repeat;
+  animation: block 1.2s linear infinite;
 }
+
 @keyframes jump {
-    0% {
-        top: 150px;
-    }
-    50% {
-        top: 100px;
-    }
-    100% {
-        top: 150px;
-    }
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
+
 @keyframes block {
-    0% {
-        left: 480px;
-    }
-    100% {
-        left: -60px;
-    }
+  0% {
+    left: calc(100% - 60px);
+  }
+  100% {
+    left: -60px;
+  }
 }
