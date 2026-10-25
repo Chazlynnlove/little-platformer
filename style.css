@@ -1,15 +1,18 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
 body {
     min-height: 100vh;
-
-}
-#game {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f0f0f0; 
+}
+
+#game {
     width: 500px;
     height: 200px;
     border: 1px solid black;
@@ -19,52 +22,51 @@ body {
     background-position: center;
     background-size: cover;
 }
+
 #character {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/running.gif);
-    background-position: center;
-    background-size: cover;
     width: 30px;
     height: 20px;
     position: absolute;
-    left: 0;
-    top: 150px;
-}
-.animate {
-    animation: jump 500ms;
-}
-#block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/vacuum-cleaner.png);
+    left: 10px;
+    bottom: 0;
+    background-image: url(images/running.gif);
     background-position: center;
     background-size: cover;
+}
+
+.animate {
+    animation: jump 500ms linear;
+}
+
+#block {
     width: 30px;
     height: 20px;
     position: absolute;
     bottom: 0;
-    left: 480px;
+    left: 500px; 
+    background-image: url(images/vacuum-cleaner.png);
+    background-position: center;
+    background-size: cover;
     animation: block 1s infinite linear;
 }
+
 @keyframes jump {
     0% {
-        top: 150px;
+        bottom: 0;
     }
     50% {
-        top: 100px;
+        bottom: 60px;
     }
     100% {
-        top: 150px;
+        bottom: 0;
     }
 }
+
 @keyframes block {
     0% {
-        left: 480px;
+        left: 500px;
     }
     100% {
-        left: -20px; 
+        left: -30px;
     }
 }
