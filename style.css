@@ -26,11 +26,11 @@ body {
     background-image: url(images/running.gif);
     background-position: center;
     background-size: cover;
-    width: 10px;
-    height: 5px;
+    width: 15px;
+    height: 10px;
     position: absolute;
     left: 0;
-    top: 100px;
+    top: 150px;
 }
 .animate {
     animation: jump 500ms;
