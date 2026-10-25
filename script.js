@@ -15,9 +15,9 @@ var checkDead = setInterval(function(){
     var blockLeft =
     parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft < 40 && blockLeft > -20 && characterTop >= 130) {
-    block.style.animation = "none";
-    block.style.display = "none";
-    alert("Pathetic. You lost, you loser. The vacuum cleaner won. Admit it.")
+        block.style.animation = "none";
+        block.style.display = "none";
+        alert("Pathetic. You lost, you loser. The vacuum cleaner won. Admit it.")
 }
 
     
